@@ -1,0 +1,79 @@
+h3.section-title Plugins
+if plugins
+    if plugins.http
+        if plugins.http.pages
+            .plugin-container
+                span.ico.ico-angle-right
+                label.plugin-label Http Pages
+            ul.plugin
+                each row in plugins.http.pages
+                    li
+                        label.ico-link=row.label
+                        span=row.url
+                        if row.headers
+                            each header in row.headers
+                                div
+                                    label.ico-briefcase Header
+                                    span #[strong Key:] "#{header.name}" #[strong Value:] "#{header.value}"
+    if plugins.remoteControl
+        .plugin-container
+            span.ico.ico-angle-right
+            label.plugin-label Remote Control
+        ul.plugin
+            each row in plugins.remoteControl
+                li
+                    label.ico-terminal=row.key
+                    span=row.value
+    if plugins.thresholds && plugins.thresholds.thresholds
+        .plugin-container
+            span.ico.ico-angle-right
+            label.plugin-label Thresholds
+        ul.plugin
+            li
+                label.ico-briefcase # Rules
+                span=plugins.thresholds.thresholds.length
+    if plugins.jmeter
+        .plugin-container
+            span.ico.ico-angle-right
+            label.plugin-label JMeter
+        ul.plugin
+            if plugins.jmeter.filename
+                li
+                    label.ico-doc file name
+                    a(href=jmxLink, target='_blank', title=plugins.jmeter.filename) #{plugins.jmeter.filename}
+            if plugins.jmeter.version
+                li
+                    label.ico-pin jmeter version
+                    span=plugins.jmeter.version
+            if plugins.jmeter.consoleArgs
+                li
+                    label.ico-terminal console arguments
+                    span=plugins.jmeter.consoleArgs
+            if plugins.jmeter.enginesArgs
+                li
+                    label.ico-terminal console engines arguments
+                    span=plugins.jmeter.enginesArgs
+    if plugins.splitCSV && plugins.splitCSV.enabled
+        .plugin-container
+            span.ico.ico-angle-right
+            label.plugin-label Split CSV
+        ul.plugin
+            li
+                label.ico-flag Activated
+                span=plugins.splitCSV.enabled
+    if plugins.reportEmail && plugins.reportEmail.enabled
+        .plugin-container
+            span.ico.ico-angle-right
+            label.plugin-label Email When Report Is Ready
+        ul.plugin
+            li
+                label.ico-flag Activated
+                span=plugins.reportEmail.enabled
+    if plugins.newrelic
+        .plugin-container
+            span.ico.ico-angle-right
+            label.plugin-label NewRelic Integration
+        ul.plugin
+            li
+                label.ico-briefcase # Profiles
+                span=plugins.newrelic.length

@@ -1,0 +1,33 @@
+{
+  "name": "jade-globals",
+  "version": "1.0.0",
+  "description": "Detect which globals are needed for your jade templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "pgilad/jade-globals",
+  "keywords": [
+    "jade",
+    "globals",
+    "detect",
+    "acorn",
+    "parse"
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "author": "Gilad Peleg <giladp007@gmail.com> (http://giladpeleg.com)",
+  "license": "MIT",
+  "dependencies": {
+    "acorn-globals": "^1.0.4",
+    "jade": "^1.9.2",
+    "lodash.defaults": "^3.1.1",
+    "lodash.uniq": "^3.1.0",
+    "lodash.without": "^3.2.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.4"
+  }
+}
