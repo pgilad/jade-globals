@@ -1,6 +1,6 @@
 # jade-globals
 
-> Map what globals your jade files require
+> Detect which globals are needed for your jade templates
 
 ## Install
 
@@ -12,7 +12,6 @@ $ npm install --save-dev jade-globals
 
 ```js
 ```
-
 
 ## License
 
