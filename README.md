@@ -1,5 +1,7 @@
 # jade-globals
 
+[![Build Status](http://img.shields.io/travis/pgilad/jade-globals.svg?style=flat)](https://travis-ci.org/pgilad/jade-globals)
+
 > Detect which global variables are used in your jade templates
 
 Given:
@@ -18,7 +20,7 @@ It's a tool meant to map your required dependencies in your jade files.
 
 ## Install
 
-```js
+```bash
 # install as a dev dependency
 $ npm install --save-dev jade-globals
 
@@ -39,7 +41,7 @@ console.log(jadeGlobals(contents));
 
 Usage as a cli:
 
-```
+```bash
 ❯ jade-globals --help
 
   Usage: jade-globals [options] <file>
