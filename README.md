@@ -1,6 +1,6 @@
 # jade-globals [![Build Status](http://img.shields.io/travis/pgilad/jade-globals.svg?style=flat)](https://travis-ci.org/pgilad/jade-globals)
 
-> Detect which global variables are used in your jade templates
+> Detect which global variables are needed for your jade templates
 
 Given:
 ```jade
@@ -44,7 +44,7 @@ Usage as a cli:
 
   Usage: jade-globals [options] <file>
 
-  Detect which global variables are used in your jade templates
+  Detect which global variables are needed for your jade templates
 
   Options:
 

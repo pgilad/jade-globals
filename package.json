@@ -1,7 +1,7 @@
 {
   "name": "jade-globals",
   "version": "1.0.0",
-  "description": "Detect which global variables are used in your jade templates",
+  "description": "Detect which global variables are needed for your jade templates",
   "author": "Gilad Peleg <giladp007@gmail.com> (http://giladpeleg.com)",
   "main": "index.js",
   "license": "MIT",
@@ -17,6 +17,7 @@
   "keywords": [
     "jade",
     "globals",
+    "templates",
     "detect",
     "acorn",
     "parse"
