@@ -1,6 +1,4 @@
-# jade-globals
-
-[![Build Status](http://img.shields.io/travis/pgilad/jade-globals.svg?style=flat)](https://travis-ci.org/pgilad/jade-globals)
+# jade-globals [![Build Status](http://img.shields.io/travis/pgilad/jade-globals.svg?style=flat)](https://travis-ci.org/pgilad/jade-globals)
 
 > Detect which global variables are used in your jade templates
 
