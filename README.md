@@ -20,7 +20,7 @@ It's a tool meant to map your required dependencies in your jade files.
 
 ## Install
 
-```bash
+```sh
 # install as a dev dependency
 $ npm install --save-dev jade-globals
 
@@ -41,7 +41,7 @@ console.log(jadeGlobals(contents));
 
 Usage as a cli:
 
-```bash
+```sh
 ❯ jade-globals --help
 
   Usage: jade-globals [options] <file>
