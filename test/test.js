@@ -12,6 +12,10 @@ function read(file) {
 
 describe('jade-globals', function () {
     describe('logic', function () {
+        it('should throw if contents are missing', function () {
+            expect(jadeGlobals).to.throwError(/Missing contents/);
+        });
+
         it('should test a simple jade file', function () {
             expect(jadeGlobals(read('simple.jade'))).to.eql(['title']);
         });
@@ -25,9 +29,21 @@ describe('jade-globals', function () {
         });
     });
 
-    describe('options', function() {
-        it('should work with non-sorting');
-        it('should with ignores');
-        it('should not remove jade global if specified');
+    describe('options', function () {
+        it('should sort variables by name (from acorn-globals)', function () {
+            expect(jadeGlobals(read('sortable.jade'))).to.eql(['aVar', 'zVar']);
+        });
+
+        it('should with ignores', function () {
+            expect(jadeGlobals(read('sortable.jade'), {
+                ignore: ['aVar']
+            })).to.eql(['zVar']);
+        });
+
+        it('should not remove jade global if specified', function () {
+            expect(jadeGlobals(read('simple.jade'), {
+                showJadeGlobal: true
+            })).to.eql(['jade', 'title']);
+        });
     });
 });

@@ -8,7 +8,6 @@ var defaults = require('lodash.defaults');
 
 var defaultParams = {
     showJadeGlobal: false,
-    sort: true,
     ignore: []
 };
 
@@ -18,7 +17,9 @@ module.exports = function getJadeGlobals(contents, params) {
         throw new Error('Missing contents');
     }
     var compiled = jade.compileClient(contents, {
-        filename: options.filename
+        filename: options.filename,
+        compileDebug: false,
+        debug: false
     });
 
     var scope = acornGlobals(compiled);
@@ -35,10 +36,6 @@ module.exports = function getJadeGlobals(contents, params) {
     ignore = uniq(ignore);
     if (ignore.length) {
         globals = without.apply(without, [globals].concat(ignore));
-    }
-
-    if (options.sort) {
-        globals.sort();
     }
     return globals;
 };
