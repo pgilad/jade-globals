@@ -1,6 +1,6 @@
 # jade-globals
 
-> Detect what global variables are used in your jade templates
+> Detect which global variables are used in your jade templates
 
 Given:
 ```jade
@@ -35,6 +35,29 @@ var jadeGlobals = require('jade-globals');
 var contents = fs.readFileSync('crazy-template.jade', 'utf8');
 console.log(jadeGlobals(contents));
 // => ['global1', 'global2']
+```
+
+Usage as a cli:
+
+```
+❯ jade-globals --help
+
+  Usage: jade-globals [options] <file>
+
+  Detect which global variables are used in your jade templates
+
+  Options:
+
+    -h, --help               output usage information
+    -V, --version            output the version number
+    -s, --show-jade-global   Show the jade global as well
+    -i, --ignore <keywords>  Ignore keyword (default: [])
+
+  Examples:
+
+    $ jade-globals template.jade
+    $ jade-globals --ignore someGlobal template.jade
+    $ cat template.jade | jade-globals
 ```
 
 ## Options

@@ -16,7 +16,8 @@ module.exports = function getJadeGlobals(contents, params) {
     if (!contents) {
         throw new Error('Missing contents');
     }
-    var compiled = jade.compileClient(contents, {
+    var compiled;
+    compiled = jade.compileClient(contents, {
         filename: options.filename,
         compileDebug: false,
         debug: false

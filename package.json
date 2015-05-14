@@ -1,7 +1,7 @@
 {
   "name": "jade-globals",
   "version": "1.0.0",
-  "description": "Detect what global variables are used in your jade templates",
+  "description": "Detect which global variables are used in your jade templates",
   "author": "Gilad Peleg <giladp007@gmail.com> (http://giladpeleg.com)",
   "main": "index.js",
   "license": "MIT",
